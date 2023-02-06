@@ -1,0 +1,60 @@
+.title-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  h1 {
+    font-family: "Syne";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 128px;
+    margin: 0;
+    text-align: center;
+  }
+  .name-hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 25px;
+    line-height: 40px;
+    div {
+      border: 2px solid black;
+      width: 100%;
+      max-width: 620px;
+    }
+    h2 {
+      font-family: "Overpass";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 48px;
+      color: var(--orange);
+      margin: 0;
+      width: max-content;
+    }
+  }
+}
+
+.info-void {
+  position: relative;
+  z-index: -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 100%;
+  min-height: 300px;
+  .info {
+    font-family: "Overpass";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 23px;
+  }
+  .flip {
+    writing-mode: vertical-lr;
+    transform: rotateZ(180deg);
+  }
+  .pinch {
+    line-height: 20px;
+  }
+}
