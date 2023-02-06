@@ -1,0 +1,149 @@
+.container-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 120px;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 620px;
+}
+
+.about-profile-picture {
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  img {
+    height: 500px;
+    width: 500px;
+    object-fit: contain;
+    margin-top: 135px;
+    background-color: #000000;
+  }
+
+  &:hover::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 78%;
+    border: 4px solid black;
+    bottom: -23px;
+    right: -25px;
+    transition: all 225ms ease-in-out;
+  }
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 90px;
+}
+
+.about-sub-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  gap: 50px;
+  .text-wrapper {
+    width: 100%;
+    p {
+      font-family: "Overpass";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 23px;
+      margin: 0;
+      width: 90%;
+    }
+  }
+
+  button {
+    border: 4px solid #000000;
+    padding: 20px 60px;
+    background-color: unset;
+    font-family: "Overpass";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 23px;
+    transition: all 125ms ease;
+    cursor: pointer;
+    &:hover {
+      padding: 20px 80px;
+      font-weight: bold;
+    }
+    &:focus {
+      background: var(--black);
+      color: white;
+    }
+  }
+}
+
+.arrow-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 400px;
+  transition: transform all 225ms ease-in-out;
+  div {
+    display: flex;
+    width: 50%;
+    justify-content: flex-end;
+  }
+}
+
+.arrow-container:hover .arrow {
+  animation: arrow-launch linear 225ms;
+  animation-fill-mode: forwards;
+}
+.arrow-container:hover .arrow::before {
+  animation: arrow-before linear 225ms;
+  animation-fill-mode: forwards;
+}
+.arrow-container:hover .arrow::after {
+  animation: arrow-after linear 225ms;
+  animation-fill-mode: forwards;
+}
+
+.arrow {
+  display: block;
+  position: relative;
+  width: 200px;
+  height: 4px;
+  background: var(--black);
+  transform: rotate(135deg);
+}
+
+.arrow::before,
+.arrow::after {
+  width: 65px;
+  height: 4px;
+  background: var(--black);
+}
+
+.arrow::before,
+.arrow::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.arrow::before {
+  transform: rotate(45deg);
+  bottom: 24px;
+  left: 143px;
+}
+
+.arrow::after {
+  transform: rotate(135deg);
+  top: 24px;
+  left: 143px;
+}
+
+
