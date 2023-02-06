@@ -1,0 +1,34 @@
+<header class="header spacer-100">
+  <img src="../../assets/img/header/ct-logo.png" />
+  <button
+    id="btn"
+    (click)="toggle()"
+    class="menu-toggle"
+    [ngClass]="{ 'menu-open': isOpen == true }"
+  >
+    <span id="btn-open" class="burger"></span>
+    <span id="btn-close" class="burger-R d-none"></span>
+  </button>
+</header>
+
+<nav class="nav-section" [ngClass]="{ 'menu-open': isOpen == true }">
+  <div class="text-button-wrapper">
+    <div class="text-button">About me</div>
+    <div class="text-button">My skills</div>
+    <div class="text-button">Portfolio</div>
+  </div>
+
+  <div class="header-footer spacer-100">
+    <div class="info-wrapper">
+      <span class="say-hi">Say Hi!</span>
+      <span class="mail">info@mail.com</span>
+    </div>
+
+    <div class="social">
+      <img src="../../assets/img/header/github.png">
+      <img src="../../assets/img/header/e-mail.png">
+      <img src="../../assets/img/header/linkedin.png">
+    </div>
+    <!-- <img src="../../assets/img/header/rect.png" /> -->
+  </div>
+</nav>
