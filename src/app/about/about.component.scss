@@ -29,9 +29,9 @@
     content: "";
     position: absolute;
     width: 100%;
-    height: 78%;
+    height: 70%;
     border: 4px solid black;
-    bottom: -23px;
+    bottom: 50px;
     right: -25px;
     transition: all 225ms ease-in-out;
   }
@@ -89,26 +89,13 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 400px;
+  height: 200px;
   transition: transform all 225ms ease-in-out;
   div {
     display: flex;
     width: 50%;
     justify-content: flex-end;
   }
-}
-
-.arrow-container:hover .arrow {
-  animation: arrow-launch linear 225ms;
-  animation-fill-mode: forwards;
-}
-.arrow-container:hover .arrow::before {
-  animation: arrow-before linear 225ms;
-  animation-fill-mode: forwards;
-}
-.arrow-container:hover .arrow::after {
-  animation: arrow-after linear 225ms;
-  animation-fill-mode: forwards;
 }
 
 .arrow {
@@ -147,3 +134,15 @@
 }
 
 
+.arrow-container:hover .arrow {
+  animation: arrow-launch linear 225ms;
+  animation-fill-mode: forwards;
+}
+.arrow-container:hover .arrow::before {
+  animation: arrow-before linear 225ms;
+  animation-fill-mode: forwards;
+}
+.arrow-container:hover .arrow::after {
+  animation: arrow-after linear 225ms;
+  animation-fill-mode: forwards;
+}
