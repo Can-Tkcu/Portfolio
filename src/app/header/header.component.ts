@@ -18,6 +18,7 @@ export class HeaderComponent {
 
   public toggle() {
     this.isOpen = !this.isOpen;
+
     setTimeout(()=> {
       document.getElementById('btn-open')?.classList.add('d-none')
       document.getElementById('btn-close')?.classList.remove('d-none')
