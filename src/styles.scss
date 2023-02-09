@@ -33,6 +33,26 @@ h2 {
   }
 }
 
+.main-button {
+  border: 4px solid #000000;
+  padding: 20px 60px;
+  background-color: unset;
+  font-family: "Overpass";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 23px;
+  transition: all 125ms ease;
+  cursor: pointer;
+  &:hover {
+    padding: 20px 80px;
+    font-weight: bold;
+  }
+  &:focus {
+    background: var(--black);
+    color: white;
+  }
+}
+
 
 // **** FONTS **** //
 
