@@ -1,0 +1,49 @@
+<form [formGroup]="contactForm" (submit)="sendMail()" #myForm>
+  <!-- NAME FORM VALIDATION -->
+  <div class="input-wrapper">
+    <input formControlName="name" type="text" placeholder="Your Name"/>
+    <ng-container *ngIf="contactForm.controls['name'] as name">
+      <ng-container *ngIf="name.dirty || name.touched">
+        <ng-container *ngIf="name.errors as errors">
+  
+            <p class="error" *ngIf="errors['required']"> Your Name is required.</p>
+            <p class="error" *ngIf="errors['minlength']">Your Name must consist of at least {{ errors['minlength']['requiredLength'] }} letters.</p>
+  
+        </ng-container>
+      </ng-container>
+    </ng-container>
+  </div>
+
+  <!-- EMAIL FORM VALIDATION -->
+  <div class="input-wrapper">
+    <input formControlName="email" type="email" placehold placeholder="Your Email"er="Your Email"/>
+    <ng-container *ngIf="contactForm.controls['email'] as email">
+      <ng-container *ngIf="email.dirty || email.touched">
+        <ng-container *ngIf="email.errors as errors">
+  
+            <p class="error" *ngIf="errors['required']"> Your Email is required.</p>
+            <p class="error" *ngIf="errors['email']"> Please enter a valid Email.</p>
+  
+        </ng-container>
+      </ng-container>
+    </ng-container>
+  </div>
+
+  <!-- MSG FORM VALIDATION -->
+  <div class="input-wrapper">
+    <textarea formControlName="message" type="text" placeholder="Your Message"></textarea>
+    <ng-container *ngIf="contactForm.controls['message'] as msg">
+      <ng-container *ngIf="msg.dirty || msg.touched">
+        <ng-container *ngIf="msg.errors as errors">
+  
+            <p class="error" *ngIf="errors['required']"> Your message is required.</p>
+            <p class="error" *ngIf="errors['minlength']">Your message must consist of at least {{ errors['minlength']['requiredLength'] }} letters.</p>
+  
+        </ng-container>
+      </ng-container>
+    </ng-container>
+  </div>
+
+  <button [ngClass]="{'secondary-button-white': contactForm.valid, 'secondary-button-white-grey': !contactForm.valid}" type="submit" [disabled]="!(contactForm.valid && (contactForm.dirty || contactForm.touched))">Send message</button>
+  <div (click)="scrollToTop()" class="scroll-to-top"></div>
+</form>

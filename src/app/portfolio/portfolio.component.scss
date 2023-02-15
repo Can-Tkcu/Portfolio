@@ -131,6 +131,8 @@
   }
 }
 
+
+// Utility for row reversed projects
 .reverse {
   flex-direction: row-reverse;
 }
@@ -166,3 +168,5 @@
 .animate-from-right {
   transform: translateX(50%);
 }
+
+

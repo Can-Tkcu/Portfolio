@@ -304,18 +304,6 @@ header {
   gap: 5px;
 }
 
-.say-hi {
-  font-family: "Syne";
-  font-style: normal;
-  font-weight: 800;
-  font-size: 78px;
-  color: var(--cream);
-  transition: all 125ms ease-in;
-  &:hover {
-    color: var(--orange);
-  }
-}
-
 .mail {
   font-family: "Overpass";
   font-style: normal;
@@ -327,14 +315,16 @@ header {
 .social {
   display: flex;
   gap: 50px;
+  div {
+    &:hover img {
+      transform: translateY(-25px);
+    }
+  }
   img {
     height: 100%;
     width: 50px;
     object-fit: cover;
     transition: all 225ms ease-in-out;
     cursor: pointer;
-    &:hover {
-      transform: translateY(-25px);
-    }
   }
 }

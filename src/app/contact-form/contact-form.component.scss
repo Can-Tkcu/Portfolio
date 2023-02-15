@@ -1,0 +1,120 @@
+form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+  background: black;
+  gap: 50px;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 30%;
+}
+
+p {
+  font-family: "Overpass";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 120%;
+}
+
+input {
+  border-bottom: 2px solid #fffcf3 !important;
+  background: #000000;
+  padding: 15px 25px;
+  font-family: "Overpass";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  outline: none;
+  border: 2px solid transparent;
+  color: var(--cream);
+
+  &.ng-dirty,
+  &.ng-touched {
+    &.ng-invalid {
+      background: url(../../assets/img/footer/error.png);
+      background-repeat: no-repeat;
+      background-position: right;
+      background-origin: content-box;
+    }
+    &.ng-valid {
+      background: url(../../assets/img/footer/valid.png);
+      background-repeat: no-repeat;
+      background-position: right;
+      background-origin: content-box;
+    }
+  }
+
+  &:hover {
+    border: 2px solid #fffcf3 !important;
+  }
+}
+
+textarea {
+  border-bottom: 2px solid #fffcf3 !important;
+  background: #000000;
+  padding: 15px 25px;
+  font-family: "Overpass";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  outline: none;
+  border: 2px solid transparent;
+  color: var(--cream);
+  min-height: 200px;
+  resize: none;
+
+  &.ng-dirty,
+  &.ng-touched {
+    &.ng-invalid {
+      background: url(../../assets/img/footer/error.png);
+      background-repeat: no-repeat;
+      background-position-x: right;
+      background-origin: content-box;
+    }
+    &.ng-valid {
+      background: url(../../assets/img/footer/valid.png);
+      background-repeat: no-repeat;
+      background-position-x: right;
+      background-origin: content-box;
+    }
+  }
+
+  &:hover {
+    border: 2px solid #fffcf3 !important;
+  }
+}
+
+.error {
+  color: #e61c40;
+}
+
+::placeholder {
+  color: var(--cream);
+}
+
+.scroll-to-top {
+  height: 50px;
+  width: 40px;
+  background-size: cover;
+  background: url(../../assets/img/footer/arrow-up.png);
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  cursor: pointer;
+  transition: all 75ms ease-in;
+  &:hover {
+    background: url(../../assets/img/footer/arrow-up-long.png);
+    height: 80px;
+    
+  }
+}

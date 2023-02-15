@@ -1,0 +1,92 @@
+section {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-header {
+  background-image: url(../../assets/img/header/rect.png);
+  background-size: cover;  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  min-height: 400px;
+
+  img {
+    object-fit: cover;
+    width: 100%;
+  }
+  .contact-header-title {
+    font-family: "Overpass";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    color: var(--orange);
+    padding: 20px 0px;
+  }
+  .contact-header-text {
+    font-family: "Overpass";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 23px;
+    color: var(--cream);
+  }
+  .text-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.arrow-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 90%;
+  height: 125px;
+  div {
+    display: flex;
+    width: 50%;
+    justify-content: flex-end;
+  }
+}
+
+.arrow {
+  display: block;
+  position: relative;
+  width: 200px;
+  height: 4px;
+  background: var(--black);
+  transform: rotate(135deg);
+}
+
+.arrow::before,
+.arrow::after {
+  width: 65px;
+  height: 4px;
+  background: var(--black);
+}
+
+.arrow::before,
+.arrow::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.arrow::before {
+  transform: rotate(45deg);
+  bottom: 24px;
+  left: 143px;
+}
+
+.arrow::after {
+  transform: rotate(135deg);
+  top: 24px;
+  left: 143px;
+}
